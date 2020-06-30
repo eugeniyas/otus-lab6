@@ -1,0 +1,356 @@
+{
+	"id": "3b9aab03-df53-4513-bd20-f98ad483dc9f",
+	"name": "Products",
+	"description": "",
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dbf5b95d-8e13-43dc-8bc7-14858b6b25eb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "98e3f4c9-ccef-4429-a3de-2a0c7f779857",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [
+		{
+			"key": "baseUrl",
+			"value": "arch.homework",
+			"disabled": false
+		},
+		{
+			"key": "productId",
+			"value": "",
+			"disabled": false
+		}
+	],
+	"order": [
+		"fed80486-8268-4157-a47c-d3d968adb854",
+		"9f66cfad-d8f2-47ea-ac3d-3b63679ead78",
+		"d8df0110-5772-42d0-a688-9f38f696cf12",
+		"3da8feaa-b439-46db-91f8-999782d73f87",
+		"60741230-958a-47e0-a74b-588ebb3cdfd4",
+		"cb1fab64-aee3-4cb3-bb10-d633278fdc55",
+		"d92fa1d9-a871-45db-b67b-0d77842ac738",
+		"436ab2f6-a739-46e4-a321-008b0be81ef9",
+		"d922758f-8b40-494d-86b9-70f72367abcd",
+		"d07bb6c0-b5b1-41b7-b2c0-d8e63765309d",
+		"f0a40bf7-d3d6-4a3f-801c-9a8562c8207a"
+	],
+	"folders_order": [],
+	"protocolProfileBehavior": {},
+	"folders": [],
+	"requests": [
+		{
+			"id": "3da8feaa-b439-46db-91f8-999782d73f87",
+			"name": "Product info after create",
+			"url": "http://{{baseUrl}}/Products?id={{productId}}",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{productId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "436ab2f6-a739-46e4-a321-008b0be81ef9",
+			"name": "Search after edit",
+			"url": "http://{{baseUrl}}/Search?text=product",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "text",
+					"value": "product",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "60741230-958a-47e0-a74b-588ebb3cdfd4",
+			"name": "Search after create",
+			"url": "http://{{baseUrl}}/Search?text=product",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "text",
+					"value": "product",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "9f66cfad-d8f2-47ea-ac3d-3b63679ead78",
+			"name": "Search \"product\"",
+			"url": "http://{{baseUrl}}/Search?text=product",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "text",
+					"value": "product",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "cb1fab64-aee3-4cb3-bb10-d633278fdc55",
+			"name": "Edit product",
+			"url": "http://{{baseUrl}}/Products/{{productId}}",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\"Name\":\"Other product name\",\"Description\":\"Other product name description\"}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d07bb6c0-b5b1-41b7-b2c0-d8e63765309d",
+			"name": "Product info after delete",
+			"url": "http://{{baseUrl}}/Products?id={{productId}}",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{productId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d8df0110-5772-42d0-a688-9f38f696cf12",
+			"name": "Create product",
+			"url": "http://{{baseUrl}}/Products",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "32831e9d-b79d-469a-a310-93b9e4ceb19d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1c4b044-82af-4709-b3cc-ff9992dce9f5",
+						"exec": [
+							"var responseJSON = JSON.parse(responseBody)\r",
+							"pm.collectionVariables.set(\"productId\", responseJSON[\"id\"])"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\"Name\":\"New product\",\"Description\":\"New product description\"}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d922758f-8b40-494d-86b9-70f72367abcd",
+			"name": "Delete product",
+			"url": "http://{{baseUrl}}/Products/{{productId}}",
+			"description": null,
+			"data": null,
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d92fa1d9-a871-45db-b67b-0d77842ac738",
+			"name": "Product info after edit",
+			"url": "http://{{baseUrl}}/Products?id={{productId}}",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{productId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "f0a40bf7-d3d6-4a3f-801c-9a8562c8207a",
+			"name": "Search after delete",
+			"url": "http://{{baseUrl}}/Search?text=product",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "text",
+					"value": "product",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "fed80486-8268-4157-a47c-d3d968adb854",
+			"name": "Search \"Phasellus\"",
+			"url": "http://{{baseUrl}}/Search?text=Phasellus",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "text",
+					"value": "Phasellus",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
